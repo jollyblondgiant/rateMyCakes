@@ -1,0 +1,21 @@
+.cakeBox{
+    display: inline-block;
+}
+.cake{
+    display: inline-block;
+}
+
+.comment{
+    display: inline-block;
+}
+h1{
+    color: red;
+}
+div.scroll {
+    height: 200px;
+    width: 300px;
+    overflow: auto;
+    border: 1px solid #666;
+    background-color: #ccc;
+    padding: 8px;
+    }

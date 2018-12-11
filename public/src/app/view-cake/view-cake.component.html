@@ -1,0 +1,14 @@
+
+<div id="{{cake._id}}" class="cakeBox">
+  
+  <div class="comment">
+    <form (submit)="addComment(cake)" class="comment">
+
+      Stars: <input type="number" max="5" min="1" [(ngModel)]="comment.stars" name="commentStars"><br />
+      <input type="textarea" [(ngModel)]="comment.comment" placeholder="Comment" name="comment.comment" /><br />
+      <input type="submit" class="btn btn-primary" value="Post Comment">
+    </form>
+  </div>
+</div>
+
+

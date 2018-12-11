@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Rate Me Cake!
+  </h1>
+  <h2>NEW CAEK!</h2>
+  <form (submit)="onSubmit()">
+    <p>{{ newCake | json }}</p>
+    <input [(ngModel)]="newCake.baker" placeholder="Your name:" name="newCake.baker" /><br />
+    <input [(ngModel)]="newCake.name" placeholder="Cake Name:" name="newCake.name" /><br />
+    <input [(ngModel)]="newCake.image" placeholder="Add Cake URL" name="newCake.image" /><br />
+    <input [(ngModel)]="newCake.description" placeholder="New Cake Description:" name="newCake.description" /><br />
+    <input class="btn btn-success" type="submit" value="Submit Your Cake" />
+  </form>
+
+  <div class = "scroll" >
+    <div *ngFor="let cake of cakes">
+        <h4>{{cake.baker}}'s {{cake.name}} Cake</h4>
+        <p>{{cake.description}}</p>
+        <img (click)='clickCake(cake)' style="width: 20%" src="{{cake.image}}" alt="{{cake.name}}">
+
+        <app-view-cake  [cake]="cake" ></app-view-cake>
+      </div>
+ </div>
+  <app-spot-cake *ngIf="seeCakes" [cake]="thisCake"></app-spot-cake>
+
+  
+
+
+
+
+</div>
+<router-outlet></router-outlet>

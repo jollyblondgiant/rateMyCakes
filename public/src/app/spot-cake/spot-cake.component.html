@@ -1,0 +1,12 @@
+<h3>
+  {{cake.baker}}'s {{cake.name}} cake!
+
+</h3>
+  <img src="{{cake.image}}" alt="{{cake.name}}" >
+
+  <div class = "scroll" >
+    <div *ngFor="let comment of cake.comments">
+      {{comment.comment}}  {{comment.stars}} stars 
+    </div>
+
+  </div>
